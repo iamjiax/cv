@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jia Xu || Blog</title>
+    <title>Jia Xu || Connect Four</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
-      href="./fontawesome-free-5.12.1-web/css/all.min.css"
+      href="../fontawesome-free-5.12.1-web/css/all.min.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -26,16 +29,16 @@
         <!-- nav links -->
         <ul class="nav-links">
           <li>
-            <a href="index.html">home</a>
+            <a href="../index.html">home</a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="../projects.html">projects</a>
           </li>
           <li>
-            <a href="blog.html">blog</a>
+            <a href="../blog.html">blog</a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="../about.html">about</a>
           </li>
         </ul>
       </div>
@@ -51,16 +54,16 @@
         <!-- sidebar links -->
         <ul class="sidebar-links">
           <li>
-            <a href="index.html">home</a>
+            <a href="../index.html">home</a>
           </li>
           <li>
-            <a href="projects.html">projects</a>
+            <a href="../projects.html">projects</a>
           </li>
           <li>
-            <a href="blog.html">blog</a>
+            <a href="../blog.html">blog</a>
           </li>
           <li>
-            <a href="about.html">about</a>
+            <a href="../about.html">about</a>
           </li>
         </ul>
         <!-- social icons -->
@@ -80,40 +83,40 @@
     </aside>
     <!-- end of sidebar -->
 
-    <!-- blog -->
-    <section class="section single-page-white blog">
+    <!-- project -->
+    <section class="section single-page-white single-blog">
       <!-- seciton title -->
       <div class="section-title">
-        <h2>blog</h2>
+        <h3>Connect Four</h3>
         <div class="underline"></div>
       </div>
       <!-- end of section title -->
-      <div class="section-center blog-center">
-        <!-- single article -->
-        <!-- <a href="blog/java.html">
-          <article class="card">
-            <img src="./images/java.png" alt="" />
-            <div class="card-info">
-              <h4>Java</h4>
-              <p>Java Learning resources.</p>
-            </div>
-          </article>
-        </a> -->
-        <!-- end of single article -->
-        <!-- single article -->
-        <a href="blog/systemdesign.html">
-          <article class="card">
-            <img src="./images/sysdgn.png" alt="" />
-            <div class="card-info">
-              <h4>System Design</h4>
-              <p>System Design Learning resources.</p>
-            </div>
-          </article>
-        </a>
-        <!-- end of single article -->
+      <div class="section-center">
+        <div class="single-project-info">
+          <h4>Python, OO Design, MVC, Processing GUI framework, JavaScript</h4>
+          <p>
+            Implemented a Processing GUI framework based "Connect Four" game
+            with MVC architecture. This game supported both human-human and
+            human-computer Playing. Multiple components includes:
+          </p>
+          <p>1) Game rendering component.</p>
+          <p>2) Gaming logic handling controller.</p>
+          <p>3) Score recording and racking system.</p>
+          <p>4) AI robot based on minimax algorithm with alpha-beta pruning.</p>
+          <p>
+            5) Rewrite the python code to
+            <a href="https://p5js.org/reference/">p5.js</a> , and deploy the
+            web-based playable version on website.
+          </p>
+        </div>
+        <div class="underline"></div>
+        <div id="canvas">
+          <p>Click the space above the grid to play</p>
+        </div>
       </div>
     </section>
-    <!-- end of blog -->
+
+    <!-- end of project -->
 
     <!-- footer -->
     <footer class="footer">
@@ -132,6 +135,7 @@
       </ul>
       <p>&copy; <span id="date"></span> jia xu. all rights reserved</p>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="game.js"></script>
   </body>
 </html>
